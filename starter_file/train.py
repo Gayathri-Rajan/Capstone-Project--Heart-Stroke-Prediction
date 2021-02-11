@@ -5,6 +5,7 @@ import numpy as np
 from sklearn.metrics import mean_squared_error
 import joblib
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder
 import pandas as pd
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
@@ -22,7 +23,15 @@ def remove(gender):
 
 def clean_data(data):
 
+    #Clean and one hot encode data
+
     x_df = data.to_pandas_dataframe().dropna()
+    x_df["gender"] = x_df.gender.apply(lambda s: 1 if s == "Female" else 0)
+    x_df["ever_married"] = x_df.ever_married.apply(lambda s: 1 if s == "yes" else 0)
+    x_df["work_type"] = x_df.work_type.apply(lambda s: 1 if s == "Govt_job" else 0)
+    x_df["Residence_type"] = x_df.Residence_type.apply(lambda s: 1 if s == "Urban" else 0)
+    x_df["smoking_status"] = x_df.smoking_status.apply(lambda s: 1 if s == "smokes" else 0)
+
     y_df = x_df.pop("stroke")
     return x_df, y_df
 
