@@ -37,7 +37,9 @@ def clean_data(data):
 
 
 #Load dataset
-dataset = pd.read_csv(https://raw.githubusercontent.com/Gayathri-Rajan/nd00333-capstone/master/starter_file/stroke-prediction-dataset.csv)
+run = Run.get_context()
+
+dataset = TabularDatasetFactory.from_delimited_files(path="https://raw.githubusercontent.com/Gayathri-Rajan/nd00333-capstone/master/starter_file/stroke-prediction-dataset.csv")
 
 #Clean the dataset
 x,y = clean_data(dataset)
@@ -46,7 +48,7 @@ x,y = clean_data(dataset)
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, train_size = 0.8, test_size  = 0.2, random_state = 42)
 
-run = Run.get_context()
+
 
 def main():
     # Add arguments to script
