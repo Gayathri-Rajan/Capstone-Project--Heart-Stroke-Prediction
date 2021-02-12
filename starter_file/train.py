@@ -26,6 +26,9 @@ def clean_data(data):
     #Clean and one hot encode data
 
     x_df = data.to_pandas_dataframe().dropna()
+    bmi = pd.get_dummies(x_df.bmi, prefix="bmi")
+    x_df.drop("bmi", inplace=True, axis=1)
+    x_df = x_df.join(bmi)
     x_df["gender"] = x_df.gender.apply(lambda s: 1 if s == "Female" else 0)
     x_df["ever_married"] = x_df.ever_married.apply(lambda s: 1 if s == "yes" else 0)
     x_df["work_type"] = x_df.work_type.apply(lambda s: 1 if s == "Govt_job" else 0)
