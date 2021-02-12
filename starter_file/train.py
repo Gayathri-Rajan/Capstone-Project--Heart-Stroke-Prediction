@@ -11,15 +11,6 @@ from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
 
 #Function to clean data
-def Impute_missing_values(dataset):
-    dataset['bmi'].fillna(dataset['bmi'].median(), inplace=True)
-    return dataset
-
-def remove(gender):
-    if 'Other' in gender:
-        return np.nan
-    else:
-        return gender
 
 def clean_data(data):
 
