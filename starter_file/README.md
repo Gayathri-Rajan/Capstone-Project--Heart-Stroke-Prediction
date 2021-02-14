@@ -1,11 +1,13 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
+# HEART STROKE PREDICTION
 
-# Your Project Title Here
+## Project Overview
 
-*TODO:* Write a short introduction to your project.
+![Project Architecture](./images/bloc.jpg)
+
+In this project two different models are created for the Stroke prediction dataset. The first one is using AutomatedML and second one is made using Hyperdrive and the hyperparameters are tuned. Based on accuracy, the model with better accuracy is deployed later.
 
 ## Project Set Up and Installation
-*OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
+
 
 ## Dataset
 
