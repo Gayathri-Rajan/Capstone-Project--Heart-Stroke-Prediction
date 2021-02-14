@@ -107,15 +107,65 @@ The following screenshots shows the best_run and fitted model.
 
 
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
+As it is a binary classification problem, the model used for HyperDrive is Logistic Regression.
+
+ -It is easy to understand
+ - Trains very easily and faster compared to complex models
+
+The parameters used for hyperparameter tuning are:
+
+ - Regularization Strength (C) with range 0.1 to 1.0 -- Inverse of regularization strength. Smaller values cause stronger regularization
+ - Max Iterations (max_iter) with values 50, 100, 150 and 200 -- Maximum number of iterations to converge
+ 
+The sampling method I used in RandomSampling. It supports both discrete and continuous values. It supports early termination of low-performance runs. In Random Sampling, the values are selected randomly from a defined search space.
+
+With the help of Early Termination policy, we can terminate poorly performing runs. The policy that I chose is BanditPolicy. Bandit Policy is based on slack factor/slack amount and evaluation interval. This policy will terminate runs whose primary metric is not within the specified slack factor/slack amount. By using this policy we could improve the computational efficiency.
+
+For the Hyperdrive Configuration the Primary metric chosen is Accuracy, Max concurrent run is 4 and Max total run is set as 100.
+
+#### Run Configuration
+The screenshot shows the configuration that I have chosen to run HYperDrive
+
+ ![HD Configuration](./Screenshots/hd%20config.jpg)
+ 
+ #### Run Details Widget
+ 
+ The following screenshots show the run details widget of the HYperDrive Run.
+ 
+ ![HD run details](./Screenshots/hd%20run%20details.jpg)
+
+The various runs which have been completed.
+
+![HD runs](./Screenshots/hd%20runs.jpg)
+
+The graphs associated with the run showing --C, --max_iter and Accuracy
+
+![max iter hd](./Screenshots/max%20iter%20hd.jpg)
+
+#### Run completed
+
+The screenshot shows that the run has been completed.
+
+![HD Run complete](./Screenshots/hd%20run%20commplete)
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
+#### Best Run
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+The following two screenshots show the best run from the HyperDrive part. One is seen in the Python SDK and other in the Azure Studio. The best model has a Accuracy of 0.940313, Regularization Strength 0.8645, Max iterations 50.
+
+![HD best run](./Screenshots/hd%20best%20run)
+
+![HD Saved best model](./Screenshots/hd%20best%20model%20saved)
 
 ## Model Deployment
+
+The AutoMl model is deployed using Azure Container Instance as a WebService. Best run environment and score.py file is provided to the InferenceConfig. Cpu_cores and memory_gb are initialized as 1 for the deployment configuration. The aci service is then created using workspace, aci service name, model, inference config and deployment configuration.
+
+The model is successfully deployed as a web service and a REST endpoint is created with status Healthy. A scoring uri is also generated to test the endpoint.
+
+
+
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
 ## Screen Recording
