@@ -53,7 +53,6 @@ At first the Automated ML part is carried out.
 The following screenshot shows the AutoML configuratio that I have chosen.
 
 ![AutoML Configuration](starter_file/Screenshots/automl config.jpg)
-
 The Experimet time out is set up so that the entire resources doesn't get used up. I hae set it to 30 minutes. The primary metric that I hae chosen in order to evaluate the result is Accuracy. The maximum number of concurrent iterations has been set to 4.
 
 AFter setting the AutoML configuration, the experiment is submitted. Classification is done on the target cloumn, stroke. It is represented as [0,1].The experiment tries out various different models. Finally it will give us the model with best Accuracy.
