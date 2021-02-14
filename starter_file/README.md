@@ -57,7 +57,7 @@ The following screenshot shows that the dataset has been uploaded.
 At first the Automated ML part is carried out. 
 The following screenshot shows the AutoML configuratio that I have chosen.
 
-![AutoML Config](./Screenshots/automl config.jpg)
+![AutoML Config](./Screenshots/automl%20config.jpg)
 
 
 The Experiment time out is set up so that the entire resources doesn't get used up. I hae set it to 30 minutes. The primary metric that I hae chosen in order to evaluate the result is Accuracy. The maximum number of concurrent iterations has been set to 4.
