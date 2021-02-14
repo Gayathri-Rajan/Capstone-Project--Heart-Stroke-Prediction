@@ -48,6 +48,11 @@ In this project, Azure AutoML and HyperDrive method will be used to make predict
 
 First, the data is dowloaded as csv file from Kaggle. It is then uploaded to the workspace using the local files option It is then accessed using the code <dataset = Dataset.get_by_name(ws, 'stroke-prediction')>
 
+### Uploaded Dataset
+The following screenshot shows that the dataset has been uploaded.
+
+![Dataset](./Screenshots/dataset.jpg)
+
 ## Automated ML
 At first the Automated ML part is carried out. 
 The following screenshot shows the AutoML configuratio that I have chosen.
@@ -59,9 +64,17 @@ The Experiment time out is set up so that the entire resources doesn't get used 
 
 AFter setting the AutoML configuration, the experiment is submitted. Classification is done on the target cloumn, stroke. It is represented as [0,1].The experiment tries out various different models. Finally it will give us the model with best Accuracy.
 
+#### AutoML Run details
+The screenshot shows the run details of AutoML
+
+![Run Details](./Screenshots/automl run details.jpg)
+
+#### Models
 The sceenshot shows the Run details of the AutoML run. It shows the various models through which it performed.
 
 ![Models](./Screenshots/models.jpg)
+
+
 
 
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
