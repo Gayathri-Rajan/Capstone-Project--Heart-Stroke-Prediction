@@ -198,3 +198,9 @@ The below screenshot shows the ways by which the model is tested
 ![Testing](./Screenshots/testing.jpg)
 ## Screen Recording
  [Link](https://youtu.be/SEboSV62dKE) to screen recording
+ 
+ ## Future Improvements
+ 
+ - Larger dataset could be used for better results
+ - Other hyperparameters can be used to see if the metrics are getting affected
+
