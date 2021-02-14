@@ -10,11 +10,15 @@ In this project two different models are created for the Stroke prediction datas
 I have used the project workspace which was given as a part of this course. You need an Azure Suscription and you log in using the credentials.
 
 ## Dataset
+
+### Overview
 The dataset that I have used for this project is from Kaggle. The dataset is [Stroke Prediction](https://www.kaggle.com/fedesoriano/stroke-prediction-dataset). 
 
 According to the World Health Organization (WHO) stroke is the 2nd leading cause of death globally, responsible for approximately 11% of total deaths. This dataset is used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status. Each row in the data provides relavant information about the patient.
 
-### Attribute Information
+### Task
+
+In this project, Azure AutoML and HyperDrive method will be used to make prediction on the death event based on patient's 10 clinical features.
 
 1) id: unique identifier
 
@@ -40,19 +44,22 @@ According to the World Health Organization (WHO) stroke is the 2nd leading cause
 
 12) stroke: 1 if the patient had a stroke or 0 if not
 
-In this project, Azure AutoML and HyperDrive method will be used to make prediction on the death event based on patient's 10 clinical features.
-
-
-### Overview
-*TODO*: Explain about the data you are using and where you got it from.
-
-### Task
-*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
-
 ### Access
-*TODO*: Explain how you are accessing the data in your workspace.
+
+First, the data is dowloaded as csv file from Kaggle. It is then uploaded to the workspace using the local files option It is then accessed using the code <dataset = Dataset.get_by_name(ws, 'stroke-prediction')>
 
 ## Automated ML
+At first the Automated ML part is carried out. 
+The following screenshot shows the AutoML configuratio that I have chosen.
+![AutoML Configuration](./Screenshots/automl config.jpg)
+
+The Experimet time out is set up so that the entire resources doesn't get used up. I hae set it to 30 minutes. The primary metric that I hae chosen in order to evaluate the result is Accuracy. The maximum number of concurrent iterations has been set to 4.
+
+AFter setting the AutoML configuration, the experiment is submitted. Classification is done on the target cloumn, stroke. It is represented as [0,1].The experiment tries out various different models. Finally it will give us the model with best Accuracy.
+
+The sceenshot shows the Run details of the 
+
+
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
 ### Results
@@ -78,5 +85,3 @@ In this project, Azure AutoML and HyperDrive method will be used to make predict
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
