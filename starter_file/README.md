@@ -52,7 +52,7 @@ First, the data is dowloaded as csv file from Kaggle. It is then uploaded to the
 At first the Automated ML part is carried out. 
 The following screenshot shows the AutoML configuratio that I have chosen.
 
-![AutoML Configuration](./Screenshots/automl config.jpg)
+![AutoML Configuration](starter_file/Screenshots/automl config.jpg)
 
 The Experimet time out is set up so that the entire resources doesn't get used up. I hae set it to 30 minutes. The primary metric that I hae chosen in order to evaluate the result is Accuracy. The maximum number of concurrent iterations has been set to 4.
 
