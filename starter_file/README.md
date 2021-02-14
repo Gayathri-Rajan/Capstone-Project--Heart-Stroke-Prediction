@@ -197,4 +197,4 @@ The below screenshot shows the ways by which the model is tested
 
 ![Testing](./Screenshots/testing.jpg)
 ## Screen Recording
- [Link](youtube.com/watch?v=SEboSV62dKE) to screen recording
+ [Link](https://youtu.be/SEboSV62dKE) to screen recording
