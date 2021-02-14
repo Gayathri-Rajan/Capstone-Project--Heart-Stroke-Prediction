@@ -147,30 +147,54 @@ The graphs associated with the run showing --C, --max_iter and Accuracy
 
 The screenshot shows that the run has been completed.
 
-![HD Run complete](./Screenshots/hd%20run%20commplete)
+![HD Run complete](./Screenshots/hd%20run%20commplete.jpg)
 
 ### Results
 #### Best Run
 
 The following two screenshots show the best run from the HyperDrive part. One is seen in the Python SDK and other in the Azure Studio. The best model has a Accuracy of 0.940313, Regularization Strength 0.8645, Max iterations 50.
 
-![HD best run](./Screenshots/hd%20best%20run)
+![HD best run](./Screenshots/hd%20best%20run.jpg)
 
-![HD Saved best model](./Screenshots/hd%20best%20model%20saved)
+![HD Saved best model](./Screenshots/hd%20best%20model%20saved.jpg)
 
 ## Model Deployment
+
+The Accuracy of AutoML is slighlty better than the HyperDrive run. Therefore the AutoML model is deployed.
 
 The AutoMl model is deployed using Azure Container Instance as a WebService. Best run environment and score.py file is provided to the InferenceConfig. Cpu_cores and memory_gb are initialized as 1 for the deployment configuration. The aci service is then created using workspace, aci service name, model, inference config and deployment configuration.
 
 The model is successfully deployed as a web service and a REST endpoint is created with status Healthy. A scoring uri is also generated to test the endpoint.
 
+#### Deployment 
+The follwoing screenshot shows that the best run environment and score.py file is provided.
 
+![Deployment configuration](./Screenshots/deploy-config.jpg)
 
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+#### Status : Healthy
 
+The screenshot shots that the deployement has bee successful. It has the status 'Healthy'
+
+![Status healthy](./Screenshots/status%20healthy%20deploy.jpg)
+
+#### Application Insights
+The application insights is enabled to be true. The below screenshot shows that and the application insights URL
+
+![Application Insights true](./Screenshots/app%20insights%20true.jpg)
+
+The below screenshots the various graphs that could help us to analyse using the application insights URL. It includes failed requests, server esponse time, server requests etc.
+
+![App insights url](./Screenshots/app%inisghts%url.jpg)
+
+#### Consume
+From the endpoints section, we can also get the Rest Endpoint and Primary Key. These two values are copied and subsituted in the endpoint.py file. Then it is tested using two methods. The screenshot below shows the consume tab.
+
+![Consume](./Screenshots/consume.jpg)
+
+#### Testing
+
+The below screenshot shows the ways by which the model is tested
+
+![Testing](./Screenshots/testing.jpg)
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
-
+ Link for screen recording
