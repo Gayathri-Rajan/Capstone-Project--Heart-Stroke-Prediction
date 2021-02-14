@@ -53,6 +53,12 @@ The following screenshot shows that the dataset has been uploaded.
 
 ![Dataset](./Screenshots/dataset.jpg)
 
+### Experiments
+
+The first experiment was conducted using AutoML and after that HyperDrive. The below sceenshots show the list of experiments.
+
+![experiments](./Screenshots/experiments.jpg)
+
 ## Automated ML
 At first the Automated ML part is carried out. 
 The following screenshot shows the AutoML configuratio that I have chosen.
@@ -64,25 +70,41 @@ The Experiment time out is set up so that the entire resources doesn't get used 
 
 AFter setting the AutoML configuration, the experiment is submitted. Classification is done on the target cloumn, stroke. It is represented as [0,1].The experiment tries out various different models. Finally it will give us the model with best Accuracy.
 
-#### AutoML Run details
+#### AutoML Run details Widget
 The screenshot shows the run details of AutoML
 
-![Run Details](./Screenshots/automl run details.jpg)
+![Run Details](./Screenshots/automl%20run%20details.jpg)
+
+#### AutoML Run Completed
+The below screen shows that the AutoML has completed its run
+
+![AutoML Run Completed](./Screenshots/automl%20run%20completed.jpg)
+
 
 #### Models
 The sceenshot shows the Run details of the AutoML run. It shows the various models through which it performed.
 
 ![Models](./Screenshots/models.jpg)
 
-
-
-
-*TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
-
 ### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
+#### Best model
+The best model from AutoML run is Stack Ensemble. It has an accuracy of 0.95124. The screenshot shows the details of the best model-stac ensemble
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+![AutoML best model](./Screenshots/automl%20best%20model.jpg)
+
+#### Paramteres
+The following screenshots show the various other metrics of the best model Stack Ensemble.
+
+![AutoML Other metric](./Screenshots/automl%20other%20metrics.jpg)
+
+![AutoMLothe run metricl](./Screenshots/other%20run%20metric.jpg)
+
+The following screenshots shows the best_run and fitted model.
+
+![AutoML best run](./Screenshots/auto%20best%20run.jpg)
+
+![AutoML fitted model](./Screenshots/auto%20fitted%20model.jpg)
+
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
