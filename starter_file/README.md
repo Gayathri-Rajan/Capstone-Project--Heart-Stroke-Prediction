@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-![Project Architecture](./images/bloc.jpg)
+![Project Architecture](./Screenshots/bloc.jpg)
 
 In this project two different models are created for the Stroke prediction dataset. The first one is using AutomatedML and second one is made using Hyperdrive and the hyperparameters are tuned. Based on accuracy, the model with better accuracy is deployed later.
 
