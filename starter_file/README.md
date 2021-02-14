@@ -59,7 +59,9 @@ The Experiment time out is set up so that the entire resources doesn't get used 
 
 AFter setting the AutoML configuration, the experiment is submitted. Classification is done on the target cloumn, stroke. It is represented as [0,1].The experiment tries out various different models. Finally it will give us the model with best Accuracy.
 
-The sceenshot shows the Run details of the 
+The sceenshot shows the Run details of the AutoML run. It shows the various models through which it performed.
+
+![Models](./Screenshots/models.jpg)
 
 
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
