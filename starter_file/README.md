@@ -184,7 +184,7 @@ The application insights is enabled to be true. The below screenshot shows that 
 
 The below screenshots the various graphs that could help us to analyse using the application insights URL. It includes failed requests, server esponse time, server requests etc.
 
-![App insights url](./Screenshots/app%inisghts%url.jpg)
+![App insights url](./Screenshots/app%20inisghts%u20url.jpg)
 
 #### Consume
 From the endpoints section, we can also get the Rest Endpoint and Primary Key. These two values are copied and subsituted in the endpoint.py file. Then it is tested using two methods. The screenshot below shows the consume tab.
